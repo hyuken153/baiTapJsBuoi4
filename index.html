@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài Tập Js Buổi 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Bài Tập 1 -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Compare between 3 random numbers</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Number 1</label>
+                <input
+                  id="number1"
+                  type="number"
+                  class="form-control"
+                  placeholder="First Number"
+                />
+              </div>
+              <div class="form-group">
+                <label>Number 2</label>
+                <input
+                  id="number2"
+                  type="number"
+                  class="form-control"
+                  placeholder="Second Number"
+                />
+              </div>
+              <div class="form-group">
+                <label>Number 3</label>
+                <input
+                  id="number3"
+                  type="number"
+                  class="form-control"
+                  placeholder="Third Number"
+                />
+              </div>
+              <button class="btn btn-success" onclick="compare()">
+                Result
+              </button>
+            </div>
+            <div id="showCompare" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bài Tập 2 -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Greeting</div>
+            <div class="card-body">
+              <div class="form-group">
+                <select id="role" class="form-control">
+                  <option value="yourRole">Your Role</option>
+                  <option value="father">Father</option>
+                  <option value="mother">Mother</option>
+                  <option value="son">Son</option>
+                  <option value="daughter">Daughter</option>
+                </select>
+                <button class="btn btn-success mt-3" onclick="greeting()">
+                  Submit
+                </button>
+              </div>
+            </div>
+            <div id="showGreeting" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bài Tập 3 -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Counting Odd And Even Numbers</div>
+            <div class="card-body">
+              <div class="form-group">
+                <input
+                  id="number1"
+                  type="number"
+                  class="form-control"
+                  placeholder="Choose Your First Number"
+                />
+                <input
+                  id="number2"
+                  type="number"
+                  class="form-control mt-3"
+                  placeholder="Choose Your Second Number"
+                />
+                <input
+                  id="number3"
+                  type="number"
+                  class="form-control mt-3"
+                  placeholder="Choose Your Third Number"
+                />
+              </div>
+              <button class="btn btn-success" onclick="counting()">
+                Result
+              </button>
+            </div>
+            <div id="showCounting" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bài Tập 4 -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Triangle Checking</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Edge A</label>
+                <input id="edgeA" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Edge B</label>
+                <input id="edgeB" type="number" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Edge C</label>
+                <input id="edgeC" type="number" class="form-control" />
+              </div>
+              <button class="btn btn-success" onclick="triCheck()">
+                Submit
+              </button>
+            </div>
+            <div id="showTriangle" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bài Tập 5 -->
+    <!-- Bài Tập 6 -->
+    <!-- Bài Tập 7 -->
+    <!-- Bài Tập 8 -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main Js -->
+    <script src="./main.js"></script>
+  </body>
+</html>
