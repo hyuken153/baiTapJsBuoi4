@@ -274,7 +274,7 @@ function getNumberInWord(number) {
   }
 }
 
-function docSo() {
+function readNumb() {
   var numberEx7 = +document.getElementById("numberEx7").value;
   var hundredInWord = "";
   var tenInWord = "";
@@ -309,7 +309,42 @@ function docSo() {
 }
 
 // Bài tập 8
+
 function calcLength() {
-  var student = document.getElementById("student");
-  console.log(student);
+  var student1 = document.getElementById("student1").value;
+  var student2 = document.getElementById("student2").value;
+  var student3 = document.getElementById("student3").value;
+  var pointX1 = +document.getElementById("pointX1").value;
+  var pointY1 = +document.getElementById("pointY1").value;
+  var pointX2 = +document.getElementById("pointX2").value;
+  var pointY2 = +document.getElementById("pointY2").value;
+  var pointX3 = +document.getElementById("pointX3").value;
+  var pointY3 = +document.getElementById("pointY3").value;
+  var pointX4 = +document.getElementById("pointX4").value;
+  var pointY4 = +document.getElementById("pointY4").value;
+
+  function dmax(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  }
+
+  if (
+    dmax(pointX1, pointY1, pointX4, pointY4) <
+      dmax(pointX2, pointY2, pointX4, pointY4) &&
+    dmax(pointX3, pointY3, pointX4, pointY4) <
+      dmax(pointX2, pointY2, pointX4, pointY4)
+  ) {
+    document.getElementById("showLength").innerHTML =
+      "Sinh viên xa trường nhất là " + student2;
+  } else if (
+    dmax(pointX1, pointY1, pointX4, pointY4) <
+      dmax(pointX3, pointY3, pointX4, pointY4) &&
+    dmax(pointX2, pointY2, pointX4, pointY4) <
+      dmax(pointX3, pointY3, pointX4, pointY4)
+  ) {
+    document.getElementById("showLength").innerHTML =
+      "Sinh viên xa trường nhất là " + student3;
+  } else {
+    document.getElementById("showLength").innerHTML =
+      "Sinh viên xa trường nhất là " + student1;
+  }
 }
