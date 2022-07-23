@@ -68,23 +68,36 @@ function greeting() {
 }
 
 // Bài Tập 3
-function counting(){
-    var number1 = +document.getElementById("number1").value;
-    var number2 = +document.getElementById("number2").value;
-    var number3 = +document.getElementById("number3").value;
+function counting() {
+  var number1 = +document.getElementById("number1").value;
+  var number2 = +document.getElementById("number2").value;
+  var number3 = +document.getElementById("number3").value;
 
-    var countOdd = 0;
-    var countEven = 0;
+  var countOdd = 0;
+  var countEven = 0;
 
-    if(number1 % 2 === 0 , number2 % 2 === 0 , number3 % 2 === 0){
-        countEven += 1;
-    }else{
-        countOdd += 1;
-    }
+  if (number1 % 2 === 0) {
+    countEven += 1;
+  } else {
+    countOdd += 1;
+  }
+  console.log(number1);
 
-    var result3 = "Có " + countEven + " số chẵn, " + countOdd + " số lẻ";
+  if (number2 % 2 === 0) {
+    countEven += 1;
+  } else {
+    countOdd += 1;
+  }
 
-    document.getElementById("showCounting").innerHTML = result3;
+  if (number3 % 2 === 0) {
+    countEven += 1;
+  } else {
+    countOdd += 1;
+  }
+
+  var result3 = "Có " + countEven + " số chẵn, " + countOdd + " số lẻ";
+
+  document.getElementById("showCounting").innerHTML = result3;
 }
 
 // Bài tập 4
@@ -105,9 +118,87 @@ function triCheck() {
     Math.pow(edgeC, 2) === Math.pow(edgeA, 2) + Math.pow(edgeB, 2)
   ) {
     result4 = "It's Right Angled Triangle";
-  }else{
-    result4 = "It's Scalene Triangle"
+  } else {
+    result4 = "It's Scalene Triangle";
   }
   //   Đầu ra: Xuất ra kết quả
   document.getElementById("showTriangle").innerHTML = result4;
+}
+
+// Bài Tập 5
+function maxDayByMonth(month) {
+  if (month === 2) {
+    return 28;
+  } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+    return 30;
+  } else {
+    return 31;
+  }
+}
+
+function isValidDate(date, month) {
+  if (month < 1 || month > 12) {
+    return false;
+  }
+  if (date < 1 || date > maxDayByMonth(month)) {
+    return false;
+  }
+  return true;
+}
+
+function yesterday() {
+  var date = +document.getElementById("date").value;
+  var month = +document.getElementById("month").value;
+  var year = +document.getElementById("year").value;
+  var showDate = "";
+  if (isValidDate(date, month)) {
+    if (date === 1) {
+      if (
+        month === 2 ||
+        month === 4 ||
+        month === 6 ||
+        month === 9 ||
+        month === 11
+      ) {
+        date = 31;
+        month -= 1;
+      } else if (month === 3) {
+        date = 28;
+        month -= 1;
+      } else if (month === 1) {
+        month = 12;
+        year -= 1;
+        date =31;
+      }
+    }
+    showDate = date + "/" + month + "/" + year;
+    document.getElementById("showDate").innerHTML = showDate;
+  } else {
+    document.getElementById("showDate").innerHTML = "Wrong";
+  }
+}
+
+function tomorrow() {
+  var date = +document.getElementById("date").value;
+  var month = +document.getElementById("month").value;
+  var year = +document.getElementById("year").value;
+  var showDate = "";
+  if (isValidDate(date, month)) {
+    if (date === maxDayByMonth(month)) {
+      if(month === 12){
+        date = 1;
+        month = 1;
+        year +=1
+      }else{
+        date = 1;
+        month +=1;
+      } 
+    }else{
+      date +=1;
+    }
+    showDate = date + "/" + month + "/" + year;
+    document.getElementById("showDate").innerHTML = showDate;
+  } else {
+    document.getElementById("showDate").innerHTML = "Wrong";
+  }
 }
