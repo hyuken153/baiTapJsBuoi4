@@ -158,32 +158,199 @@
     </div>
 
     <!-- Bài Tập 5 -->
-    <div class="container">
+    <div class="container py-5">
       <div class="row">
         <div class="col-6">
           <div class="card">
-            <div class="card-header">Header</div>
+            <div class="card-header">Calculating Date</div>
             <div class="card-body">
               <div class="form-group">
-                <input id="date" type="number" class="form-control" placeholder="Insert Date" />
+                <input
+                  id="date"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Date"
+                />
               </div>
               <div class="form-group">
-                <input id="month" type="number" class="form-control" placeholder="Insert Month" />
+                <input
+                  id="month"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Month"
+                />
               </div>
               <div class="form-group">
-                <input id="year" type="number" class="form-control" placeholder="Insert Year" />
+                <input
+                  id="year"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Year"
+                />
               </div>
-              <button class="btn btn-success" onclick="yesterday()">The Day Before</button>
-              <button class="btn btn-success" onclick="tomorrow()">The Day After</button>
+              <button class="btn btn-success" onclick="yesterday()">
+                The Day Before
+              </button>
+              <button class="btn btn-success" onclick="tomorrow()">
+                The Day After
+              </button>
             </div>
             <div id="showDate" class="card-footer"></div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Bài Tập 6 -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Caculating Day In Leap Year</div>
+            <div class="card-body">
+              <div class="form-group">
+                <input
+                  id="monthEx6"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Month"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  id="yearEx6"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Year"
+                />
+              </div>
+              <button class="btn btn-success" onclick="calcDay()">
+                Result
+              </button>
+            </div>
+            <div id="showDateEx6" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bài Tập 7 -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Đọc Số</div>
+            <div class="card-body">
+              <div class="form-group">
+                <input
+                  id="numberEx7"
+                  type="number"
+                  class="form-control"
+                  placeholder="Nhập số có 3 chữ số"
+                />
+              </div>
+              <button class="btn btn-success" onclick="docSo()">Result</button>
+            </div>
+            <div id="showNumberEx7" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bài Tập 8 -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">Ai xa trường nhất</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Studen 1</label>
+                <input
+                  id="student"
+                  type="text"
+                  class="form-control"
+                  placeholder="Insert Name"
+                />
+                <input
+                  id="toaDoX"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert X"
+                />
+                <input
+                  id="toaDoY"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Y"
+                />
+              </div>
+              <div class="form-group">
+                <label>Studen 2</label>
+                <input
+                  id="student"
+                  type="text"
+                  class="form-control"
+                  placeholder="Insert Name"
+                />
+                <input
+                  id="toaDoX"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert X"
+                />
+                <input
+                  id="toaDoY"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Y"
+                />
+              </div>
+              <div class="form-group">
+                <label>Studen 3</label>
+                <input
+                  id="student"
+                  type="text"
+                  class="form-control"
+                  placeholder="Insert Name"
+                />
+                <input
+                  id="toaDoX"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert X"
+                />
+                <input
+                  id="toaDoY"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Y"
+                />
+              </div>
+              <div class="form-group">
+                <label>School</label>
+                <input
+                  id="toaDoX"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert X"
+                />
+                <input
+                  id="toaDoY"
+                  type="number"
+                  class="form-control"
+                  placeholder="Insert Y"
+                />
+              </div>
+              <button class="btn btn-success" onclick="calcLength()">
+                Result
+              </button>
+            </div>
+            <div id="showLength" class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

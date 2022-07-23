@@ -168,7 +168,7 @@ function yesterday() {
       } else if (month === 1) {
         month = 12;
         year -= 1;
-        date =31;
+        date = 31;
       }
     }
     showDate = date + "/" + month + "/" + year;
@@ -185,20 +185,131 @@ function tomorrow() {
   var showDate = "";
   if (isValidDate(date, month)) {
     if (date === maxDayByMonth(month)) {
-      if(month === 12){
+      if (month === 12) {
         date = 1;
         month = 1;
-        year +=1
-      }else{
+        year += 1;
+      } else {
         date = 1;
-        month +=1;
-      } 
-    }else{
-      date +=1;
+        month += 1;
+      }
+    } else {
+      date += 1;
     }
     showDate = date + "/" + month + "/" + year;
     document.getElementById("showDate").innerHTML = showDate;
   } else {
     document.getElementById("showDate").innerHTML = "Wrong";
   }
+}
+
+// Bài Tập 6
+function isLeapYear(year) {
+  return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+}
+
+function maxDayByMonthEx6(month, year) {
+  if (month === 2) {
+    if (isLeapYear(year)) {
+      return 29;
+    } else {
+      return 28;
+    }
+  } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+    return 30;
+  } else {
+    return 31;
+  }
+}
+
+function calcDay() {
+  var monthEx6 = +document.getElementById("monthEx6").value;
+  var yearEx6 = +document.getElementById("yearEx6").value;
+
+  var dayEx6 =
+    "Tháng " +
+    monthEx6 +
+    " năm " +
+    yearEx6 +
+    " có " +
+    maxDayByMonthEx6(monthEx6, yearEx6) +
+    " ngày.";
+
+  document.getElementById("showDateEx6").innerHTML = dayEx6;
+}
+
+// Bài Tập 7
+function getNumberInWord(number) {
+  switch (number) {
+    case 1: {
+      return "Một";
+    }
+    case 2: {
+      return "Hai";
+    }
+    case 3: {
+      return "Ba";
+    }
+    case 4: {
+      return "Bốn";
+    }
+    case 5: {
+      return "Năm";
+    }
+    case 6: {
+      return "Sáu";
+    }
+    case 7: {
+      return "Bảy";
+    }
+    case 8: {
+      return "Tám";
+    }
+    case 9: {
+      return "Chín";
+    }
+    default: {
+      return "Không";
+    }
+  }
+}
+
+function docSo() {
+  var numberEx7 = +document.getElementById("numberEx7").value;
+  var hundredInWord = "";
+  var tenInWord = "";
+  var unitInWord = "";
+
+  var hundred = Math.floor(numberEx7 / 100);
+  var ten = Math.floor((numberEx7 % 100) / 10);
+  var unit = (numberEx7 % 100) % 10;
+
+  if (hundred !== 0) {
+    hundredInWord = getNumberInWord(hundred) + " Trăm ";
+  }
+
+  if (ten === 0) {
+    if (unit !== 0) {
+      tenInWord = " Lẻ ";
+    } else {
+      tenInWord = "";
+    }
+  } else if (ten === 1) {
+    tenInWord = "Mười ";
+  } else {
+    tenInWord = getNumberInWord(ten) + " Mươi ";
+  }
+
+  if (unit !== 0) {
+    unitInWord = getNumberInWord(unit);
+  }
+
+  document.getElementById("showNumberEx7").innerHTML =
+    hundredInWord + tenInWord + unitInWord;
+}
+
+// Bài tập 8
+function calcLength() {
+  var student = document.getElementById("student");
+  console.log(student);
 }
